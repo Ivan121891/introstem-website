@@ -5,21 +5,20 @@ import { useCart } from '../contexts/CartContext'
 const links = [
   { to: '/', label: 'Home' },
   { to: '/services', label: 'Facial Services' },
-  { to: '/packages', label: 'Products' },
+  { to: '/packages', label: 'Packages' },
   { to: '/about', label: 'About' },
   { to: '/contact', label: 'Contact' },
 ]
 
 export default function Navbar() {
   const [open, setOpen] = useState(false)
-  const { totalItems } = useCart()
+  const { totalItems, toggleDrawer } = useCart()
 
   return (
     <nav className="sticky top-0 z-50 bg-luna-dark/95 backdrop-blur-sm border-b border-luna-gold/20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 lg:h-20">
-          <Link to="/" className="flex items-center gap-2">
-            <img src="/images/logo.webp" alt="Studio Luna" className="h-8 w-auto object-contain" />
+          <Link to="/" className="flex items-center">
             <span className="text-xl lg:text-2xl font-playfair text-luna-gold tracking-wide">Studio Luna</span>
           </Link>
           {/* Desktop nav */}
@@ -34,12 +33,8 @@ export default function Navbar() {
                   }`
                 }>{l.label}</NavLink>
             ))}
-            {/* Cart icon */}
-            <NavLink to="/cart" className={({ isActive }) =>
-              `relative ml-3 p-2 rounded-full transition-colors ${
-                isActive ? 'text-luna-gold bg-luna-gold/10' : 'text-luna-cream/80 hover:text-luna-gold-light hover:bg-luna-midnight/50'
-              }`
-            }>
+{/* Cart icon */}
+            <button onClick={toggleDrawer} className="relative ml-3 p-2 rounded-full text-luna-cream/80 hover:text-luna-gold-light hover:bg-luna-midnight/50 transition-colors">
               <svg viewBox="0 0 24 24" className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="1.5">
                 <path d="M6.5 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3.5-4H6.5zM3 6h18" />
                 <path d="M16 10a4 4 0 01-8 0" />
@@ -49,13 +44,11 @@ export default function Navbar() {
                   {totalItems > 99 ? '99+' : totalItems}
                 </span>
               )}
-            </NavLink>
+            </button>
           </div>
           {/* Mobile hamburger + cart */}
-          <div className="flex items-center gap-2 lg:hidden">
-            <NavLink to="/cart" className={({ isActive }) =>
-              `relative p-2 rounded-full ${isActive ? 'text-luna-gold' : 'text-luna-cream/80'}`
-            }>
+<div className="flex items-center gap-2 lg:hidden">
+            <button onClick={toggleDrawer} className="relative p-2 text-luna-cream/80 transition-colors">
               <svg viewBox="0 0 24 24" className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="1.5">
                 <path d="M6.5 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3.5-4H6.5zM3 6h18" />
                 <path d="M16 10a4 4 0 01-8 0" />
@@ -65,7 +58,7 @@ export default function Navbar() {
                   {totalItems}
                 </span>
               )}
-            </NavLink>
+            </button>
             <button onClick={() => setOpen(!open)}
               className="text-luna-gold p-2" aria-label="Menu">
               <svg viewBox="0 0 24 24" className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth="2">

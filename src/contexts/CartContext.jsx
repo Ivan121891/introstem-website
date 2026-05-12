@@ -11,6 +11,7 @@ export function CartProvider({ children }) {
       return []
     }
   })
+  const [drawerOpen, setDrawerOpen] = useState(false)
 
   useEffect(() => {
     localStorage.setItem('studio-luna-cart', JSON.stringify(items))
@@ -26,6 +27,7 @@ export function CartProvider({ children }) {
       }
       return [...prev, { ...product, qty: 1 }]
     })
+    setDrawerOpen(true)
   }
 
   const removeItem = (id) => {
@@ -38,12 +40,19 @@ export function CartProvider({ children }) {
   }
 
   const clearCart = () => setItems([])
+  const openDrawer = () => setDrawerOpen(true)
+  const closeDrawer = () => setDrawerOpen(false)
+  const toggleDrawer = () => setDrawerOpen(prev => !prev)
 
   const totalItems = items.reduce((sum, i) => sum + i.qty, 0)
   const totalPrice = items.reduce((sum, i) => sum + i.price * i.qty, 0)
 
   return (
-    <CartContext.Provider value={{ items, addItem, removeItem, updateQty, clearCart, totalItems, totalPrice }}>
+    <CartContext.Provider value={{
+      items, addItem, removeItem, updateQty, clearCart,
+      totalItems, totalPrice,
+      drawerOpen, openDrawer, closeDrawer, toggleDrawer,
+    }}>
       {children}
     </CartContext.Provider>
   )

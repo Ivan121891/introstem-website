@@ -1,16 +1,16 @@
 @import "tailwindcss";
 
 @theme {
-  --color-luna-dark: #1B1B2F;
-  --color-luna-midnight: #2D2D44;
-  --color-luna-gold: #C9A96E;
-  --color-luna-gold-light: #E8D5A3;
-  --color-luna-cream: #FDF8F3;
-  --color-luna-blush: #F5E6E8;
-  --color-luna-mauve: #8B6F8B;
-  --color-luna-charcoal: #2C2C2C;
-  --color-luna-gray: #6B7280;
-  --color-luna-light: #F3F0EB;
+  --color-luna-dark: #0a1f1f;
+  --color-luna-midnight: #0d5252;
+  --color-luna-gold: #d4a254;
+  --color-luna-gold-light: #e8d5b0;
+  --color-luna-cream: #fdfcf8;
+  --color-luna-blush: #faf6ee;
+  --color-luna-mauve: #a87a30;
+  --color-luna-charcoal: #0a1f1f;
+  --color-luna-gray: #4a5656;
+  --color-luna-light: #faf6ee;
 }
 
 html {
@@ -24,4 +24,22 @@ html {
 
 .font-playfair {
   font-family: 'Playfair Display', Georgia, serif;
+}
+
+.text-gradient-gold {
+  background: linear-gradient(135deg, #0d5252 0%, #d4a254 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-gradient-gold-light {
+  background: linear-gradient(135deg, #ffffff 0%, #d4a254 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.bg-gradient-teal {
+  background: linear-gradient(135deg, #0a1f1f 0%, #052e2e 100%);
 }

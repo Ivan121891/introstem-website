@@ -6,8 +6,9 @@ export default function Contact() {
 
   return (
     <div>
-      <section className="py-20 bg-gradient-to-br from-luna-dark via-luna-midnight to-luna-dark">
-        <div className="max-w-4xl mx-auto px-4 text-center">
+      <section className="py-20 bg-gradient-teal relative overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_85%_20%,rgba(212,162,84,0.06)_0%,transparent_45%),radial-gradient(circle_at_15%_85%,rgba(13,82,82,0.04)_0%,transparent_45%)]" />
+        <div className="relative max-w-4xl mx-auto px-4 text-center">
           <span className="text-luna-gold-light text-sm tracking-[0.2em] uppercase">Connect</span>
           <h1 className="mt-3 text-5xl sm:text-6xl font-playfair text-luna-cream">Get in Touch</h1>
           <p className="mt-4 text-luna-cream/60 max-w-xl mx-auto">We are happy to address any inquiries or arrange a consultation with a complimentary expert skin analysis. We will contact you within 24 hours.</p>
@@ -126,6 +127,52 @@ export default function Contact() {
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Map & Directions */}
+      <section className="py-20 bg-luna-blush">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <span className="text-luna-mauve text-sm tracking-[0.2em] uppercase">Directions</span>
+            <h2 className="mt-3 text-4xl font-playfair text-luna-charcoal">Find Us</h2>
+            <p className="mt-3 text-luna-gray max-w-xl mx-auto">Located at 6371 Mission St, Daly City — just minutes from the Serramonte Center.</p>
+          </div>
+          <div className="rounded-2xl overflow-hidden border border-luna-gold/10 shadow-sm">
+            <div className="aspect-[21/9] bg-luna-dark flex items-center justify-center">
+              <div className="text-center px-6">
+                <svg viewBox="0 0 24 24" className="w-10 h-10 text-luna-gold/40 mx-auto mb-3" fill="none" stroke="currentColor" strokeWidth="1.5">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" />
+                  <circle cx="12" cy="10" r="3" />
+                </svg>
+                <p className="text-luna-cream/70 text-sm">6371 Mission St, Daly City, CA 94014</p>
+                <div className="mt-4 flex flex-wrap items-center justify-center gap-6 text-xs text-luna-cream/50">
+                  <span>Parking available in rear lot</span>
+                  <span className="w-px h-4 bg-luna-gold/20" />
+                  <span>Wheelchair accessible entrance</span>
+                  <span className="w-px h-4 bg-luna-gold/20" />
+                  <span>2 blocks from Daly City BART</span>
+                </div>
+                <a href="https://maps.google.com/?q=6371+Mission+St+Daly+City+CA+94014" target="_blank" rel="noopener noreferrer"
+                  className="mt-6 inline-flex items-center gap-2 px-6 py-2.5 bg-luna-gold text-luna-dark text-xs tracking-wider uppercase rounded-full font-medium hover:bg-luna-gold-light transition-all duration-200">
+                  Open in Google Maps
+                  <svg viewBox="0 0 24 24" className="w-3.5 h-3.5" fill="none" stroke="currentColor" strokeWidth="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3" /></svg>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div className="mt-10 grid grid-cols-1 sm:grid-cols-3 gap-6">
+            {[
+              { title: 'By Car', desc: 'Located on Mission St near Gellert Blvd. Free parking in the rear lot.' },
+              { title: 'By BART', desc: 'Daly City Station is a 5-min walk. Exit toward Mission St and head north.' },
+              { title: 'By Bus', desc: 'SamTrans routes ECR, 110, 120 stop within 2 blocks of our studio.' },
+            ].map(d => (
+              <div key={d.title} className="p-5 rounded-xl bg-luna-cream border border-luna-gold/5 text-center">
+                <h4 className="text-sm font-playfair text-luna-charcoal">{d.title}</h4>
+                <p className="mt-1.5 text-xs text-luna-gray leading-relaxed">{d.desc}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>

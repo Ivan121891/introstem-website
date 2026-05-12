@@ -19,15 +19,16 @@ const values = [
 export default function About() {
   return (
     <div>
-      <section className="py-20 bg-gradient-to-br from-luna-dark via-luna-midnight to-luna-dark">
-        <div className="max-w-4xl mx-auto px-4 text-center">
+      <section className="py-20 bg-gradient-teal relative overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_85%_20%,rgba(212,162,84,0.06)_0%,transparent_45%),radial-gradient(circle_at_15%_85%,rgba(13,82,82,0.04)_0%,transparent_45%)]" />
+        <div className="relative max-w-4xl mx-auto px-4 text-center">
           <span className="text-luna-gold-light text-sm tracking-[0.2em] uppercase">About Us</span>
           <h1 className="mt-3 text-5xl sm:text-6xl font-playfair text-luna-cream">Our Story</h1>
           <p className="mt-4 text-luna-cream/60 max-w-xl mx-auto">Behind every glowing complexion is a space of trust, expertise, and genuine care.</p>
         </div>
       </section>
 
-      <section className="py-24 bg-luna-cream">
+      <section className="py-24 bg-luna-blush">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
@@ -52,7 +53,7 @@ export default function About() {
         </div>
       </section>
 
-      <section className="py-24 bg-white">
+      <section className="py-24 bg-luna-cream">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <span className="text-luna-mauve text-sm tracking-[0.2em] uppercase">Our Philosophy</span>
@@ -74,7 +75,7 @@ export default function About() {
         </div>
       </section>
 
-      <section className="py-24 bg-luna-cream">
+      <section className="py-24 bg-luna-blush">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <span className="text-luna-mauve text-sm tracking-[0.2em] uppercase">Team</span>
@@ -96,11 +97,12 @@ export default function About() {
         </div>
       </section>
 
-      <section className="py-16 bg-luna-dark">
-        <div className="max-w-3xl mx-auto px-4 text-center">
+      <section className="py-16 bg-gradient-teal relative overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_85%_20%,rgba(212,162,84,0.06)_0%,transparent_45%),radial-gradient(circle_at_15%_85%,rgba(13,82,82,0.04)_0%,transparent_45%)]" />
+        <div className="relative max-w-3xl mx-auto px-4 text-center">
           <h2 className="text-3xl font-playfair text-luna-cream">Experience the Studio Luna Difference</h2>
           <p className="mt-3 text-luna-cream/60">Come in for a complimentary consultation and see why our clients trust us with their skin.</p>
-          <Link to="/contact" className="mt-8 inline-flex items-center gap-2 px-8 py-3.5 bg-luna-gold text-luna-dark font-medium tracking-wider uppercase text-sm rounded-full hover:bg-luna-gold-light transition-all duration-200">
+          <Link to="/contact" className="mt-8 inline-flex items-center gap-2 px-7 py-3.5 bg-luna-midnight text-white font-semibold text-base rounded-[8px] shadow-[0_4px_12px_rgba(13,82,82,0.25)] hover:brightness-110 transition-all duration-200">
             Book Your Visit
             <svg viewBox="0 0 24 24" className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2"><path d="M5 12h14M12 5l7 7-7 7" /></svg>
           </Link>

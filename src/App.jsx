@@ -1,6 +1,7 @@
 import { Routes, Route } from 'react-router-dom'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
+import CartDrawer from './components/CartDrawer'
 import Home from './pages/Home'
 import Services from './pages/Services'
 import Packages from './pages/Packages'
@@ -8,6 +9,7 @@ import Cart from './pages/Cart'
 import Checkout from './pages/Checkout'
 import About from './pages/About'
 import Contact from './pages/Contact'
+import CheckoutSuccess from './pages/CheckoutSuccess'
 
 export default function App() {
   return (
@@ -22,9 +24,11 @@ export default function App() {
           <Route path="/checkout" element={<Checkout />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/checkout/success" element={<CheckoutSuccess />} />
         </Routes>
       </main>
       <Footer />
+      <CartDrawer />
     </div>
   )
 }
