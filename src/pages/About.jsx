@@ -41,12 +41,8 @@ export default function About() {
               </div>
             </div>
             <div className="hidden lg:block">
-              <div className="aspect-square rounded-2xl bg-gradient-to-br from-luna-midnight to-luna-dark border border-luna-gold/10 flex items-center justify-center p-12">
-                <div className="text-center">
-                  <img src="/images/logo.webp" alt="Introstem" className="h-20 mx-auto mb-6 opacity-70" />
-                  <div className="w-full h-px bg-luna-gold/20 my-6" />
-                  <p className="text-luna-cream/30 text-sm italic max-w-xs mx-auto">"Great skin is not a luxury — it is a reflection of care, science, and consistency."</p>
-                </div>
+              <div className="aspect-square rounded-2xl overflow-hidden border border-luna-gold/10">
+                <img src="/spa-room.jpg" alt="Introstem spa interior, Chicago" className="w-full h-full object-cover" />
               </div>
             </div>
           </div>
