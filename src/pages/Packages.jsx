@@ -3,83 +3,73 @@ import { useCart } from '../contexts/CartContext'
 
 const packages = [
   {
-    id: 'glow-starter',
-    name: 'The Glow Starter',
-    price: '225',
-    original: '280',
-    desc: 'Perfect for first-timers. A complete introductory experience with three essential treatments.',
-    items: ['24K Nano Gold Recovery Facial', 'Vitamin C Boost', 'Express Facial'],
-    popular: false,
+    id: 'chicago-glow',
+    name: 'The Chicago Glow',
+    price: '399',
+    original: '499',
+    desc: 'The ultimate introduction. HydraFacial MD combined with LED therapy for luminous, even-toned skin.',
+    items: ['HydraFacial MD', 'LED Light Therapy (Red + Blue)', 'Custom Enzyme Mask'],
+    popular: true,
     image: 'facial-1.jpg',
   },
   {
-    id: 'radiance-routine',
-    name: 'The Radiance Routine',
-    price: '375',
-    original: '470',
-    desc: 'Our most popular package. Resurfacing and hydration for dramatic visible results.',
-    items: ['Oxygen Jet Facial', 'Cryogenic Correction', 'LED Light Therapy'],
-    popular: true,
+    id: 'magnificent-mile',
+    name: 'The Magnificent Mile',
+    price: '549',
+    original: '690',
+    desc: 'Advanced resurfacing for dramatic results. Micro-needling paired with a medical-grade peel for deep collagen renewal.',
+    items: ['Signature Micro-Needling', 'Medical-Grade Chemical Peel', 'Soothing Recovery Mask'],
+    popular: false,
     image: 'facial-2.jpg',
   },
   {
-    id: 'full-moon-ritual',
-    name: 'The Full Moon Ritual',
-    price: '550',
-    original: '690',
-    desc: 'The ultimate indulgence. Complete skin transformation with advanced treatments.',
-    items: ['Collagen Regeneration Facial', 'Lymphatic Facial Lift', 'Therapeutic Heat Facial'],
+    id: 'laser-renewal',
+    name: 'Laser Renewal Course',
+    price: '899',
+    original: '1095',
+    desc: 'A three-session Laser Genesis series for lasting texture and tone improvement.',
+    items: ['3x Laser Genesis Sessions', 'Custom Home-Care Regimen', 'Progress Photos & Analysis'],
     popular: false,
     image: 'facial-4.jpg',
   },
   {
     id: 'monthly-membership',
     name: 'Monthly Membership',
-    price: '99',
+    price: '129',
     original: null,
-    desc: 'One facial per month plus 15% off add-ons and retail. Cancel anytime.',
-    items: ['1 Facial Treatment / month', '15% off add-ons', '10% off retail', 'Birthday treatment'],
+    desc: 'One advanced treatment per month plus exclusive member perks. Pause or cancel anytime.',
+    items: ['1 Treatment / Month (up to $169 value)', '20% off add-on services', '15% off retail products', 'Free birthday treatment'],
     popular: false,
     monthly: true,
     image: 'spa-1.jpg',
   },
   {
-    id: 'hydra-facial',
-    name: 'HydraGlow Express',
-    price: '120',
-    original: '150',
-    desc: 'Quick yet powerful hydration boost. Perfect for lunch-break glow-ups.',
-    items: ['Deep Pore Cleanse', 'Hydrating Serum Infusion', 'Cooling Mask'],
-    popular: false,
-    image: 'facial-3.jpg',
-  },
-  {
-    id: 'acne-clarity',
-    name: 'Acne Clarity Ritual',
-    price: '185',
-    original: '230',
-    desc: 'Targeted treatment for acne-prone skin. Calms inflammation and prevents breakouts.',
-    items: ['Salicylic Acid Peel', 'LED Blue Light Therapy', 'Soothing Clay Mask'],
+    id: 'clear-skin',
+    name: 'Clear Skin Protocol',
+    price: '399',
+    original: '499',
+    desc: 'Targeted clinical approach for acne-prone and congested skin. Calms inflammation and prevents future breakouts.',
+    items: ['Medical-Grade Salicylic Peel', 'LED Blue Light Therapy', 'Soothing Clay Mask', 'Home-Care Starter Kit'],
     popular: false,
     image: 'facial-5.jpg',
   },
   {
-    id: 'anti-aging-lift',
-    name: 'Ageless Lift',
-    price: '320',
-    original: '400',
-    desc: 'Advanced anti-aging with microcurrent lifting and collagen induction therapy.',
-    items: ['Microcurrent Lift', 'Collagen Sheet Mask', 'Radiofrequency Eye Treatment'],
+    id: 'age-defy',
+    name: 'Age-Defy Ritual',
+    price: '399',
+    original: '500',
+    desc: 'Advanced collagen induction with PRP micro-needling plus radiofrequency eye treatment.',
+    items: ['PRP Micro-Needling', 'Radiofrequency Eye Tightening', 'Collagen Sheet Mask'],
     popular: false,
     image: 'facial-6.jpg',
   },
   {
     id: 'couples-retreat',
-    name: 'Couples Moonlight Retreat',
-    price: '750',
-    original: '950',
-    desc: 'A romantic spa experience for two. Side-by-side treatments in a private suite.',
-    items: ['2 Customized Facials', 'Champagne & Chocolates', '20% off retail take-home'],
+    name: 'Couples Spa Retreat',
+    price: '699',
+    original: '895',
+    desc: 'A shared experience on the Magnificent Mile. Choose any two treatments for a side-by-side session in our couples suite.',
+    items: ['2 Customized Treatments', 'Champagne or Sparkling Water', '20% off retail take-home'],
     popular: false,
     image: 'spa-2.jpg',
   },
@@ -106,7 +96,7 @@ export default function Packages() {
           <span className="text-luna-gold-light text-sm tracking-[0.2em] uppercase">Value</span>
           <h1 className="mt-3 text-5xl sm:text-6xl font-playfair text-luna-cream">Packages and Memberships</h1>
           <p className="mt-4 text-luna-cream/60 max-w-xl mx-auto">
-            Save more when you bundle. Our curated packages pair perfectly together, and our membership makes monthly glow-ups effortless.
+            Save more when you bundle. Our curated packages pair perfectly together, and our membership makes monthly self-care effortless.
           </p>
         </div>
       </section>
@@ -172,7 +162,7 @@ export default function Packages() {
           <p className="text-xs text-luna-gray leading-relaxed">
             * Package prices are pre-tax. Packages must be used within 6 months of purchase and are non-refundable but transferable.
             Membership auto-renews monthly and can be canceled anytime with 30 days notice.
-            Gift cards also available -- contact us for details.
+            Gift cards also available — contact us for details.
           </p>
         </div>
       </section>

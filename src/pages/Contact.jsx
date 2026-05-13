@@ -33,7 +33,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <label htmlFor="phone" className="block text-sm font-medium text-luna-charcoal mb-1.5">Phone Number</label>
-                    <input id="phone" type="tel" className="w-full px-4 py-3 rounded-xl border border-luna-gold/20 bg-white text-luna-charcoal placeholder:text-luna-gray/50 focus:outline-none focus:border-luna-gold focus:ring-1 focus:ring-luna-gold/30 transition-all" placeholder="(415) 347-7149" />
+                    <input id="phone" type="tel" className="w-full px-4 py-3 rounded-xl border border-luna-gold/20 bg-white text-luna-charcoal placeholder:text-luna-gray/50 focus:outline-none focus:border-luna-gold focus:ring-1 focus:ring-luna-gold/30 transition-all" placeholder="(773) 900-5559" />
                   </div>
                   <div>
                     <label htmlFor="service" className="block text-sm font-medium text-luna-charcoal mb-1.5">Interested In</label>
@@ -78,7 +78,7 @@ export default function Contact() {
                     </div>
                     <div>
                       <p className="text-sm font-medium text-luna-charcoal">Address</p>
-                      <p className="text-sm text-luna-gray mt-1">6371 Mission St<br />Daly City, CA 94014</p>
+                      <p className="text-sm text-luna-gray mt-1">520 N. Michigan Ave., Unit 122<br />Chicago, IL 60611</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-4">
@@ -87,7 +87,7 @@ export default function Contact() {
                     </div>
                     <div>
                       <p className="text-sm font-medium text-luna-charcoal">Phone</p>
-                      <p className="text-sm text-luna-gray mt-1">(415) 347-7149</p>
+                      <p className="text-sm text-luna-gray mt-1">(773) 900-5559</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-4">
@@ -96,7 +96,7 @@ export default function Contact() {
                     </div>
                     <div>
                       <p className="text-sm font-medium text-luna-charcoal">Email</p>
-                      <p className="text-sm text-luna-gray mt-1">info@spastudiolunabodysculpting.com</p>
+                      <p className="text-sm text-luna-gray mt-1">support@organicbsi.com</p>
                     </div>
                   </div>
                 </div>
@@ -106,9 +106,9 @@ export default function Contact() {
                 <h3 className="text-xl font-playfair text-luna-charcoal mb-6">Hours</h3>
                 <div className="space-y-3">
                   {[
-                    { day: 'Monday - Friday', hours: '9:00 AM - 7:00 PM' },
-                    { day: 'Saturday', hours: '10:00 AM - 5:00 PM' },
-                    { day: 'Sunday', hours: 'Closed' },
+                    { day: 'Sunday', hours: '11:00 AM - 7:00 PM' },
+                    { day: 'Monday - Thursday', hours: '10:00 AM - 8:00 PM' },
+                    { day: 'Friday - Saturday', hours: '10:00 AM - 9:00 PM' },
                   ].map(s => (
                     <div key={s.day} className="flex items-center justify-between py-2 border-b border-luna-gold/5 last:border-0">
                       <span className="text-sm text-luna-charcoal">{s.day}</span>
@@ -137,7 +137,7 @@ export default function Contact() {
           <div className="text-center mb-12">
             <span className="text-luna-mauve text-sm tracking-[0.2em] uppercase">Directions</span>
             <h2 className="mt-3 text-4xl font-playfair text-luna-charcoal">Find Us</h2>
-            <p className="mt-3 text-luna-gray max-w-xl mx-auto">Located at 6371 Mission St, Daly City — just minutes from the Serramonte Center.</p>
+            <p className="mt-3 text-luna-gray max-w-xl mx-auto">Located at 520 N. Michigan Ave., Chicago — just steps from the Magnificent Mile.</p>
           </div>
           <div className="rounded-2xl overflow-hidden border border-luna-gold/10 shadow-sm">
             <div className="aspect-[21/9] bg-luna-dark flex items-center justify-center">
@@ -146,15 +146,15 @@ export default function Contact() {
                   <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" />
                   <circle cx="12" cy="10" r="3" />
                 </svg>
-                <p className="text-luna-cream/70 text-sm">6371 Mission St, Daly City, CA 94014</p>
+                <p className="text-luna-cream/70 text-sm">520 N. Michigan Ave., Unit 122, Chicago, IL 60611</p>
                 <div className="mt-4 flex flex-wrap items-center justify-center gap-6 text-xs text-luna-cream/50">
-                  <span>Parking available in rear lot</span>
+                  <span>Valet parking available</span>
                   <span className="w-px h-4 bg-luna-gold/20" />
                   <span>Wheelchair accessible entrance</span>
                   <span className="w-px h-4 bg-luna-gold/20" />
-                  <span>2 blocks from Daly City BART</span>
+                  <span>2 blocks from Chicago Red Line</span>
                 </div>
-                <a href="https://maps.google.com/?q=6371+Mission+St+Daly+City+CA+94014" target="_blank" rel="noopener noreferrer"
+                <a href="https://maps.google.com/?q=520+N+Michigan+Ave+Chicago+IL+60611" target="_blank" rel="noopener noreferrer"
                   className="mt-6 inline-flex items-center gap-2 px-6 py-2.5 bg-luna-gold text-luna-dark text-xs tracking-wider uppercase rounded-full font-medium hover:bg-luna-gold-light transition-all duration-200">
                   Open in Google Maps
                   <svg viewBox="0 0 24 24" className="w-3.5 h-3.5" fill="none" stroke="currentColor" strokeWidth="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3" /></svg>
@@ -164,9 +164,9 @@ export default function Contact() {
           </div>
           <div className="mt-10 grid grid-cols-1 sm:grid-cols-3 gap-6">
             {[
-              { title: 'By Car', desc: 'Located on Mission St near Gellert Blvd. Free parking in the rear lot.' },
-              { title: 'By BART', desc: 'Daly City Station is a 5-min walk. Exit toward Mission St and head north.' },
-              { title: 'By Bus', desc: 'SamTrans routes ECR, 110, 120 stop within 2 blocks of our studio.' },
+              { title: 'By Car', desc: 'Located on N. Michigan Ave near E. Grand Ave. Valet and nearby garage parking available.' },
+              { title: 'By CTA', desc: 'Chicago Red Line is a 5-min walk. Exit at Grand Ave and head north on Michigan Ave.' },
+              { title: 'By Bus', desc: 'CTA routes 146, 147, 151 stop within 2 blocks of our studio on Michigan Ave.' },
             ].map(d => (
               <div key={d.title} className="p-5 rounded-xl bg-luna-cream border border-luna-gold/5 text-center">
                 <h4 className="text-sm font-playfair text-luna-charcoal">{d.title}</h4>

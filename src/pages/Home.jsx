@@ -1,37 +1,37 @@
 import { Link } from 'react-router-dom'
 
 const services = [
-  { name: '24K Nano Gold Recovery Facial', desc: 'Deeply nourish and revitalize your skin with 24K gold. Soft, smooth, beautifully illuminated.', price: '$175' },
-  { name: 'Oxygen Jet Facial', desc: 'Ultra-hydrating facial that instantly refreshes and soothes. Plump, youthful, luminous.', price: '$145' },
-  { name: 'Collagen Regeneration Facial', desc: 'Restore smooth, supple, and youthful bounce with collagen-enhancing treatment.', price: '$155' },
-  { name: 'Cryogenic Correction', desc: 'Cooling wave tightens, brightens, and revitalizes your complexion in an instant.', price: '$165' },
+  { name: 'Signature Micro-Needling', desc: 'Stimulate collagen production for smoother, firmer skin. A clinically proven treatment that reduces fine lines and improves texture.', price: '$199' },
+  { name: 'HydraFacial MD', desc: 'Deep cleansing, exfoliation, and intense hydration in one seamless treatment. Instant glow with zero downtime.', price: '$169' },
+  { name: 'Laser Genesis', desc: 'Non-ablative laser therapy that targets redness, uneven tone, and enlarged pores. Warm, soothing, and highly effective.', price: '$249' },
+  { name: 'Chemical Peel (Medical-Grade)', desc: 'Customized peels to address hyperpigmentation, acne scarring, and dullness. Visible results in days.', price: '$179' },
 ]
 
 const testimonials = [
-  { quote: 'My skin has never looked this radiant. The facial changed everything -- I am a client for life.', name: 'Sarah M.', title: 'Regular since 2022' },
-  { quote: 'Studio Luna is pure magic. The atmosphere is so calming, and my complexion is glowing after every visit.', name: 'Jessica K.', title: 'Monthly member' },
-  { quote: 'I was nervous about my first facial, but the estheticians made me feel so comfortable. The results were incredible.', name: 'Amanda R.', title: 'New client' },
+  { quote: 'I have been to dozens of med-spas in Chicago, and Introstem is a cut above. The results speak for themselves -- my skin has never looked better.', name: 'Rebecca T.', title: 'Regular since 2024' },
+  { quote: 'The team at Introstem genuinely cares. They took the time to understand my skin concerns and built a custom plan that actually worked.', name: 'David L.', title: 'Monthly member' },
+  { quote: 'I was nervous about getting a chemical peel, but the estheticians walked me through every step. The results were incredible.', name: 'Monica R.', title: 'New client' },
 ]
 
 const featuredPackages = [
-  { name: 'The Radiance Routine', price: '$375', original: '$470', desc: 'Resurfacing + hydration for dramatic results. Our most popular bundle.', image: 'facial-2.jpg' },
-  { name: 'The Full Moon Ritual', price: '$550', original: '$690', desc: 'Complete skin transformation with advanced treatments.', image: 'facial-4.jpg' },
-  { name: 'Monthly Membership', price: '$99/mo', desc: 'One facial per month plus 15% off add-ons and retail. Cancel anytime.', image: 'spa-1.jpg' },
-  { name: 'Couples Moonlight Retreat', price: '$750', original: '$950', desc: 'Romantic spa experience for two in a private suite.', image: 'spa-2.jpg' },
+  { name: 'The Chicago Glow', price: '$349', original: '$445', desc: 'HydraFacial + LED therapy for a luminous, even complexion. Perfect for first-time guests.', image: 'facial-2.jpg' },
+  { name: 'The Magnificent Mile', price: '$549', original: '$690', desc: 'Micro-needling + medical-grade peel for dramatic resurfacing and collagen renewal.', image: 'facial-4.jpg' },
+  { name: 'Monthly Membership', price: '$129/mo', desc: 'One advanced treatment per month plus 20% off add-ons and retail. Pause or cancel anytime.', image: 'spa-1.jpg' },
+  { name: 'Couples Spa Retreat', price: '$699', original: '$895', desc: 'Choose any two treatments for a shared experience in our private couples suite.', image: 'spa-2.jpg' },
 ]
 
 const stats = [
-  { number: '12+', label: 'Years Experience' },
-  { number: '5,000+', label: 'Happy Clients' },
+  { number: '10+', label: 'Years Experience' },
+  { number: '3,500+', label: 'Happy Clients' },
   { number: '15+', label: 'Advanced Treatments' },
-  { number: '98%', label: 'Satisfaction Rate' },
+  { number: '97%', label: 'Satisfaction Rate' },
 ]
 
 const benefits = [
-  { title: 'Licensed Estheticians', desc: 'Every treatment is performed by certified professionals with years of advanced training.', icon: 'shield' },
-  { title: 'Medical-Grade Products', desc: 'We use only the highest-quality, clinical-grade skincare products for visible results.', icon: 'droplet' },
-  { title: 'Personalized Plans', desc: 'No two faces are alike. Every facial is customized to your unique skin concerns.', icon: 'heart' },
-  { title: 'Relaxing Atmosphere', desc: 'From candle-lit rooms to soothing music, every detail is designed for your comfort.', icon: 'sparkles' },
+  { title: 'Board-Certified Team', desc: 'Every treatment is performed or supervised by licensed medical professionals with advanced aesthetic training.', icon: 'shield' },
+  { title: 'Medical-Grade Technology', desc: 'We invest in the latest aesthetic devices and clinical-grade products for visible, lasting results.', icon: 'droplet' },
+  { title: 'Customized Treatment Plans', desc: 'No two faces are the same. Every plan is tailored to your skin type, concerns, and goals.', icon: 'heart' },
+  { title: 'Relaxing Urban Retreat', desc: 'Located in the heart of the Magnificent Mile, our studio is designed to help you unwind from city life.', icon: 'sparkles' },
 ]
 
 const gallery = [
@@ -50,21 +50,21 @@ export default function Home() {
             <div className="flex items-center px-4 sm:px-8 lg:px-12 py-20">
               <div className="w-full max-w-xl">
                 <div className="inline-flex items-center px-4 py-1.5 bg-luna-gold/10 border border-luna-gold/20 rounded-full text-luna-mauve text-xs tracking-wider uppercase font-medium mb-6">
-                  Daly City's Premier Facial Spa
+                  Chicago's Premier Medical Aesthetic Spa
                 </div>
                 <h1 className="text-4xl sm:text-5xl lg:text-7xl font-playfair text-luna-charcoal leading-[1.1]">
-                  Your Skin Deserves<br /><span className="text-gradient-gold">the Moon</span>
+                  Advanced Aesthetics,<br /><span className="text-gradient-gold">Natural Results</span>
                 </h1>
                 <p className="mt-6 text-base text-luna-gray leading-relaxed max-w-lg">
-                  At Studio Luna, we craft personalized facial experiences that restore, renew, and reveal your natural radiance. Advanced aesthetic treatments in a warm, tranquil setting.
+                  At Introstem, we combine medical-grade technology with an artist's touch. Our advanced aesthetic treatments deliver real results — so you can look and feel your best, naturally.
                 </p>
                 <div className="mt-8 flex flex-wrap gap-4">
                   <Link to="/services" className="inline-flex items-center gap-2 px-7 py-3.5 bg-luna-midnight text-white font-semibold text-base rounded-[8px] shadow-[0_4px_12px_rgba(13,82,82,0.25)] hover:brightness-110 transition-all duration-200">
-                    Explore Services
+                    Explore Treatments
                     <svg viewBox="0 0 24 24" className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2"><path d="M5 12h14M12 5l7 7-7 7" /></svg>
                   </Link>
                   <Link to="/contact" className="inline-flex items-center gap-2 px-7 py-3.5 border border-[#e8e1d5] text-luna-dark font-semibold text-base rounded-[8px] bg-transparent hover:bg-luna-blush transition-all duration-200">
-                    Book Now
+                    Book a Consultation
                   </Link>
                 </div>
                 {/* Stats row */}
@@ -81,14 +81,14 @@ export default function Home() {
 
             {/* Right: Image */}
             <div className="relative min-h-[50vh] lg:min-h-full overflow-hidden">
-              <img src="/images/hero-portrait.jpg" alt="Luxury facial spa experience at Studio Luna"
+              <img src="/images/hero-portrait.jpg" alt="Medical aesthetic experience at Introstem"
                 className="absolute inset-0 w-full h-full object-cover" />
               <div className="absolute inset-0 bg-gradient-to-l from-transparent via-transparent to-luna-cream/20" />
               {/* Consultation card overlay */}
               <div className="absolute bottom-8 left-8 right-8 lg:left-auto lg:w-72">
                 <div className="bg-white/90 backdrop-blur-sm rounded-2xl border border-[#e8e1d5] shadow-lg p-6">
-                  <p className="text-sm font-semibold text-luna-charcoal">Start Your <span className="text-gradient-gold">Glow Journey</span></p>
-                  <p className="mt-1 text-xs text-luna-gray">Complimentary 15-min skin analysis.</p>
+                  <p className="text-sm font-semibold text-luna-charcoal">Start Your <span className="text-gradient-gold">Transformation</span></p>
+                  <p className="mt-1 text-xs text-luna-gray">Complimentary 15-min skin consultation.</p>
                   <Link to="/contact"
                     className="mt-3 block w-full text-center py-2.5 bg-luna-midnight text-white font-semibold text-sm rounded-[8px] shadow-[0_4px_12px_rgba(13,82,82,0.25)] hover:brightness-110 transition-all duration-200">
                     Book Free Consultation
@@ -106,8 +106,8 @@ export default function Home() {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-14">
             <span className="text-luna-gold-light text-sm tracking-[0.2em] uppercase">Why Choose Us</span>
-            <h2 className="mt-3 text-4xl sm:text-5xl font-playfair text-luna-cream">Built for Your <span className="text-gradient-gold">Glow</span></h2>
-            <p className="mt-4 text-luna-cream/60 max-w-xl mx-auto">Every detail is designed with your comfort and results in mind.</p>
+            <h2 className="mt-3 text-4xl sm:text-5xl font-playfair text-luna-cream">The Introstem <span className="text-gradient-gold">Difference</span></h2>
+            <p className="mt-4 text-luna-cream/60 max-w-xl mx-auto">Clinical expertise meets exceptional care in every treatment.</p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {benefits.map(b => (
@@ -133,8 +133,8 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <span className="text-luna-mauve text-sm tracking-[0.2em] uppercase">Treatments</span>
-            <h2 className="mt-3 text-4xl sm:text-5xl font-playfair text-luna-dark">Signature Facial Services</h2>
-            <p className="mt-4 text-luna-gray max-w-xl mx-auto">Each treatment is tailored to your unique skin concerns, combining clinical techniques with holistic care.</p>
+            <h2 className="mt-3 text-4xl sm:text-5xl font-playfair text-luna-dark">Advanced Aesthetic Services</h2>
+            <p className="mt-4 text-luna-gray max-w-xl mx-auto">Each treatment combines clinical science with a thoughtful, personalized approach.</p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {services.map(s => (
@@ -165,7 +165,7 @@ export default function Home() {
           <div className="text-center mb-16">
             <span className="text-luna-mauve text-sm tracking-[0.2em] uppercase">Save More</span>
             <h2 className="mt-3 text-4xl sm:text-5xl font-playfair text-luna-dark">Featured Packages</h2>
-            <p className="mt-4 text-luna-gray max-w-xl mx-auto">Bundle and save on curated combinations of our most beloved treatments.</p>
+            <p className="mt-4 text-luna-gray max-w-xl mx-auto">Bundle and save on curated combinations of our most popular treatments.</p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {featuredPackages.map(pkg => (
@@ -197,12 +197,12 @@ export default function Home() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
               <span className="text-luna-gold-light text-sm tracking-[0.2em] uppercase">Our Story</span>
-              <h2 className="mt-3 text-4xl sm:text-5xl font-playfair text-luna-cream">Where Light Meets Skin</h2>
+              <h2 className="mt-3 text-4xl sm:text-5xl font-playfair text-luna-cream">Where Science Meets Self-Care</h2>
               <p className="mt-6 text-luna-cream/60 leading-relaxed">
-                Studio Luna Body Sculpting was born from a simple belief -- that skincare is self-care. Our team of licensed estheticians brings years of experience and a deep passion for helping you feel beautiful in your own skin.
+                Founded on the belief that great skincare is rooted in great science, Introstem brings Chicago a new standard of medical-grade aesthetics. Our team combines clinical expertise with a warm, personalized touch.
               </p>
               <p className="mt-4 text-luna-cream/60 leading-relaxed">
-                We use only the highest-quality products and cutting-edge technology, all wrapped in a warm, tranquil atmosphere designed to melt your stress away.
+                We use only the most advanced technology and medical-grade products — all delivered in a serene, welcoming environment designed to help you feel your best.
               </p>
               <Link to="/about" className="mt-8 inline-flex items-center gap-2 text-luna-gold hover:text-luna-gold-light transition-colors text-sm tracking-wider uppercase">
                 Learn More About Us
@@ -212,8 +212,8 @@ export default function Home() {
             <div className="hidden lg:block">
               <div className="aspect-[4/3] rounded-2xl bg-gradient-to-br from-luna-midnight to-luna-dark border border-luna-gold/10 p-8 flex items-center justify-center">
                 <div className="text-center">
-                  <p className="text-luna-cream/40 text-sm italic max-w-xs mx-auto">&ldquo;Skincare is not just about appearance -- it's a ritual of self-love and renewal.&rdquo;</p>
-                  <p className="mt-3 text-luna-gold text-sm font-playfair">-- Studio Luna Philosophy</p>
+                  <p className="text-luna-cream/40 text-sm italic max-w-xs mx-auto">&ldquo;True beauty is not about changing who you are — it's about revealing the best version of yourself.&rdquo;</p>
+                  <p className="mt-3 text-luna-gold text-sm font-playfair">-- Introstem Philosophy</p>
                 </div>
               </div>
             </div>
@@ -252,12 +252,12 @@ export default function Home() {
           <div className="text-center mb-12">
             <span className="text-luna-gold-light text-sm tracking-[0.2em] uppercase">Follow Us</span>
             <h2 className="mt-3 text-4xl sm:text-5xl font-playfair text-luna-cream">Behind the Glow</h2>
-            <p className="mt-4 text-luna-cream/60 max-w-xl mx-auto">Follow @studioluna on Instagram for behind-the-scenes, treatment highlights, and glowing transformations.</p>
+            <p className="mt-4 text-luna-cream/60 max-w-xl mx-auto">Follow us on Instagram for behind-the-scenes, treatment highlights, and real transformations.</p>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3">
             {gallery.map((src, i) => (
               <a key={i} href="#" className="group relative aspect-square overflow-hidden rounded-xl">
-                <img src={src} alt={`Studio Luna treatment ${i + 1}`} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+                <img src={src} alt={`Introstem treatment ${i + 1}`} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
                 <div className="absolute inset-0 bg-luna-dark/0 group-hover:bg-luna-dark/40 transition-all duration-300 flex items-center justify-center">
                   <svg className="w-8 h-8 text-white opacity-0 group-hover:opacity-100 transition-opacity" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                     <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
@@ -275,10 +275,10 @@ export default function Home() {
       <section className="py-20 bg-gradient-teal relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_85%_20%,rgba(212,162,84,0.06)_0%,transparent_45%),radial-gradient(circle_at_15%_85%,rgba(13,82,82,0.04)_0%,transparent_45%)]" />
         <div className="max-w-3xl mx-auto px-4 text-center">
-          <h2 className="text-4xl sm:text-5xl font-playfair text-luna-cream">Ready to <span className="text-gradient-gold">Glow</span>?</h2>
-          <p className="mt-4 text-luna-cream/60">Your journey to radiant skin begins with a single appointment. Let us take care of the rest.</p>
+          <h2 className="text-4xl sm:text-5xl font-playfair text-luna-cream">Ready to <span className="text-gradient-gold">Transform</span>?</h2>
+          <p className="mt-4 text-luna-cream/60">Your journey to radiant, healthy skin begins with a single consultation. Let us take care of the rest.</p>
           <Link to="/contact" className="mt-10 inline-flex items-center gap-2 px-7 py-3.5 bg-luna-midnight text-white font-semibold text-base rounded-[8px] shadow-[0_4px_12px_rgba(13,82,82,0.25)] hover:brightness-110 transition-all duration-200">
-            Book Your Appointment
+            Book Your Consultation
             <svg viewBox="0 0 24 24" className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2"><path d="M5 12h14M12 5l7 7-7 7" /></svg>
           </Link>
         </div>

@@ -1,26 +1,23 @@
 {
-  "name": "studio-luna",
+  "name": "introstem-website",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "dev:server": "node server/index.cjs",
+    "server": "node server/index.cjs",
     "dev:all": "node server/index.cjs & vite",
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview"
   },
   "dependencies": {
-    "@stripe/react-stripe-js": "^6.3.0",
-    "@stripe/stripe-js": "^9.5.0",
     "@tailwindcss/vite": "^4.3.0",
     "cors": "^2.8.6",
     "express": "^5.2.1",
     "react": "^19.2.6",
     "react-dom": "^19.2.6",
     "react-router-dom": "^7.15.0",
-    "stripe": "^22.1.1",
     "tailwindcss": "^4.3.0"
   },
   "devDependencies": {

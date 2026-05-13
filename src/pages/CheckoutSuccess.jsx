@@ -9,7 +9,7 @@ export default function CheckoutSuccess() {
             <path d="M20 6L9 17l-5-5" />
           </svg>
         </div>
-        <h1 className="text-3xl font-playfair text-luna-charcoal mb-3">Payment Successful!</h1>
+        <h1 className="text-3xl font-playfair text-luna-charcoal mb-3">Order Placed!</h1>
         <p className="text-luna-gray mb-2">Your order has been confirmed.</p>
         <p className="text-luna-gray mb-8">We'll be in touch within 24 hours.</p>
         <Link to="/"

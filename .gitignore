@@ -9,6 +9,8 @@ lerna-debug.log*
 
 node_modules
 dist
+server/orders.json
+dist
 dist-ssr
 *.local
 server/.env

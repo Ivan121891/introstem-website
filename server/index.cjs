@@ -2,60 +2,75 @@ const express = require('express');
 const cors = require('cors');
 const fs = require('fs');
 const path = require('path');
-const Stripe = require('stripe');
 
-// Load .env file manually
-const envPath = path.join(__dirname, '.env');
-if (fs.existsSync(envPath)) {
-  const envContent = fs.readFileSync(envPath, 'utf-8');
-  envContent.split('\n').forEach(line => {
-    const [key, ...vals] = line.split('=');
-    if (key && vals.length) process.env[key.trim()] = vals.join('=').trim();
-  });
-}
-
-const STRIPE_SECRET_KEY = process.env.STRIPE_SECRET_KEY || '';
-if (!STRIPE_SECRET_KEY) {
-  console.warn('⚠️  STRIPE_SECRET_KEY not set. Run: STRIPE_SECRET_KEY=sk_test_... npm run dev:server');
-}
-
-const stripe = Stripe(STRIPE_SECRET_KEY);
 const app = express();
 const PORT = process.env.SERVER_PORT || 3001;
+const ORDERS_FILE = path.join(__dirname, 'orders.json');
 
 app.use(cors({ origin: true }));
 app.use(express.json());
 
-app.post('/api/create-payment-intent', async (req, res) => {
+// Load existing orders
+function loadOrders() {
   try {
-    const { items } = req.body;
+    if (fs.existsSync(ORDERS_FILE)) {
+      return JSON.parse(fs.readFileSync(ORDERS_FILE, 'utf-8'));
+    }
+  } catch (e) { /* ignore */ }
+  return [];
+}
+
+function saveOrders(orders) {
+  fs.writeFileSync(ORDERS_FILE, JSON.stringify(orders, null, 2));
+}
+
+app.post('/api/place-order', (req, res) => {
+  try {
+    const { items, customer } = req.body;
 
     if (!items || items.length === 0) {
       return res.status(400).json({ error: 'Cart is empty' });
     }
-
-    const amount = items.reduce((sum, item) => sum + Math.round(item.price * 100) * item.qty, 0);
-
-    if (amount < 50) {
-      return res.status(400).json({ error: 'Minimum amount is $0.50' });
+    if (!customer || !customer.name || !customer.email) {
+      return res.status(400).json({ error: 'Name and email are required' });
     }
 
-    const paymentIntent = await stripe.paymentIntents.create({
-      amount,
-      currency: 'usd',
-      payment_method_types: ['card', 'affirm', 'klarna', 'afterpay_clearpay'],
-      metadata: {
-        items: JSON.stringify(items.map(i => ({ id: i.id, name: i.name, qty: i.qty }))),
-      },
-    });
+    const total = items.reduce((sum, item) => sum + item.price * item.qty, 0);
 
-    res.json({ clientSecret: paymentIntent.client_secret });
+    const order = {
+      id: 'ORD-' + Date.now(),
+      items,
+      customer,
+      total,
+      status: 'pending',
+      paymentMethod: 'card',
+      createdAt: new Date().toISOString(),
+    };
+
+    const orders = loadOrders();
+    orders.push(order);
+    saveOrders(orders);
+
+    console.log(`\n=== NEW ORDER (${order.id}) ===`);
+    console.log(`Customer: ${customer.name} (${customer.email})`);
+    console.log(`Phone: ${customer.phone || 'N/A'}`);
+    console.log(`Notes: ${customer.notes || 'N/A'}`);
+    console.log('Items:');
+    items.forEach(i => console.log(`  - ${i.name} x${i.qty} = $${(i.price * i.qty).toFixed(2)}`));
+    console.log(`Total: $${total.toFixed(2)}`);
+    console.log(`===========================\n`);
+
+    res.json({ success: true, orderId: order.id });
   } catch (err) {
-    console.error('Stripe error:', err);
+    console.error('Order error:', err);
     res.status(500).json({ error: err.message });
   }
 });
 
+app.get('/api/orders', (req, res) => {
+  res.json(loadOrders());
+});
+
 app.listen(PORT, () => {
-  console.log(`⚡ Stripe server running on http://localhost:${PORT}`);
+  console.log(`Order server running on http://localhost:${PORT}`);
 });

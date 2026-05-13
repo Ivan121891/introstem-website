@@ -1,19 +1,19 @@
 import { Link } from 'react-router-dom'
 
 const team = [
-  { name: 'Elena Vasquez', role: 'Founder and Lead Esthetician',
-    bio: 'With over 12 years of experience in luxury skincare, Elena founded Studio Luna to create a space where self-care meets clinical excellence. She specializes in advanced facials and skin transformation.' },
-  { name: 'Maya Chen', role: 'Senior Esthetician',
-    bio: 'Maya brings 8 years of expertise in holistic skincare and facial massage techniques. Her gentle touch and intuitive understanding of skin make every treatment feel like a ritual.' },
-  { name: 'Sophie Laurent', role: 'Licensed Esthetician',
-    bio: 'Sophie specializes in corrective treatments including 24K gold facials and cryogenic correction. Her keen eye for detail helps clients achieve lasting results.' },
+  { name: 'Dr. Sarah Chen', role: 'Medical Director',
+    bio: 'Board-certified with 15+ years in aesthetic medicine, Dr. Chen brings clinical rigor and an artist\'s eye. She oversees all treatment protocols and customizes every plan to each client\'s unique needs.' },
+  { name: 'Maya Williams', role: 'Lead Aesthetician',
+    bio: 'Maya has spent a decade perfecting advanced facial techniques — from micro-needling to chemical peels. Her gentle touch and deep knowledge of skin biology put every client at ease.' },
+  { name: 'James Park', role: 'Clinical Specialist',
+    bio: 'James specializes in laser therapies and non-invasive body contouring. He is known for his thorough consultations and ability to explain complex treatments in plain, reassuring terms.' },
 ]
 
 const values = [
-  { title: 'Advanced Technology', desc: 'We use cutting-edge aesthetic technology to provide our clients with fast, visible results requiring little to no downtime.' },
-  { title: 'Customized Programs', desc: 'No two faces are the same. Every treatment is customized to your skin type, concerns, and personal goals.' },
-  { title: 'Natural Results', desc: 'We believe in enhancing your natural beauty. Our treatments deliver subtle, natural-looking results that make you feel like the best version of yourself.' },
-  { title: 'Beauty Concierge', desc: 'From the moment you step in, a personal beauty specialist is dedicated to making your experience with us unparalleled.' },
+  { title: 'Evidence-Based Care', desc: 'Every treatment we offer is backed by clinical research and performed with FDA-cleared technology. No gimmicks — just results.' },
+  { title: 'Customized Programs', desc: 'Your skin is unique, and your treatment plan should be too. We take the time to understand your goals before recommending a single procedure.' },
+  { title: 'Natural Results', desc: 'We believe in enhancing what is already there. Our treatments deliver subtle, natural-looking results that make you feel like the best version of yourself.' },
+  { title: 'Comfort & Confidence', desc: 'From the moment you step into our Michigan Avenue studio, our goal is to make you feel informed, comfortable, and excited about your journey.' },
 ]
 
 export default function About() {
@@ -24,7 +24,7 @@ export default function About() {
         <div className="relative max-w-4xl mx-auto px-4 text-center">
           <span className="text-luna-gold-light text-sm tracking-[0.2em] uppercase">About Us</span>
           <h1 className="mt-3 text-5xl sm:text-6xl font-playfair text-luna-cream">Our Story</h1>
-          <p className="mt-4 text-luna-cream/60 max-w-xl mx-auto">Behind every glowing complexion is a space of trust, expertise, and genuine care.</p>
+          <p className="mt-4 text-luna-cream/60 max-w-xl mx-auto">Where clinical excellence meets genuine, personalized care on Chicago's Magnificent Mile.</p>
         </div>
       </section>
 
@@ -32,20 +32,20 @@ export default function About() {
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
-              <h2 className="text-4xl font-playfair text-luna-charcoal leading-tight">A Sanctuary for <span className="text-luna-gold">Radiant Skin</span></h2>
+              <h2 className="text-4xl font-playfair text-luna-charcoal leading-tight">Advanced Aesthetics, <span className="text-luna-gold">Personal Touch</span></h2>
               <div className="mt-6 space-y-4 text-luna-gray leading-relaxed">
-                <p>Studio Luna Body Sculpting was founded with a vision that went beyond skincare. Founder Elena Vasquez wanted to create a place where people could escape the noise of everyday life and reconnect with themselves.</p>
-                <p>Located at 6371 Mission St in Daly City, our studio combines clinical precision with a spa-like serenity. We believe skincare is self-care, and every treatment should feel as good as it looks.</p>
-                <p>Our estheticians are not just technicians -- they are artists who listen. Whether you are looking for deep cleansing, anti-aging support, or a moment of peace, we tailor each session to your unique needs.</p>
-                <p>At Studio Luna, we do not just treat skin. We nurture confidence, one glow at a time.</p>
+                <p>Introstem was founded with a clear vision: to bring Chicago a new standard of medical-grade aesthetic care — one that combines cutting-edge technology with genuine warmth and personal attention.</p>
+                <p>Located at 520 N. Michigan Ave. in the heart of the Magnificent Mile, our studio was designed to feel like a sanctuary from the energy of city life. Every detail, from our treatment rooms to our consultation process, is built around your comfort and confidence.</p>
+                <p>Our practitioners are not just skilled clinicians — they are educators who take the time to understand your goals and explain your options. Whether you are exploring your first treatment or adding a new service to your routine, we are here to guide you with honesty and expertise.</p>
+                <p>At Introstem, we measure success one confident smile at a time.</p>
               </div>
             </div>
             <div className="hidden lg:block">
               <div className="aspect-square rounded-2xl bg-gradient-to-br from-luna-midnight to-luna-dark border border-luna-gold/10 flex items-center justify-center p-12">
                 <div className="text-center">
-                  <img src="/images/logo.webp" alt="Studio Luna" className="h-20 mx-auto mb-6 opacity-70" />
+                  <img src="/images/logo.webp" alt="Introstem" className="h-20 mx-auto mb-6 opacity-70" />
                   <div className="w-full h-px bg-luna-gold/20 my-6" />
-                  <p className="text-luna-cream/30 text-sm italic max-w-xs mx-auto">"In the middle of difficulty lies opportunity for radiant transformation."</p>
+                  <p className="text-luna-cream/30 text-sm italic max-w-xs mx-auto">"Great skin is not a luxury — it is a reflection of care, science, and consistency."</p>
                 </div>
               </div>
             </div>
@@ -79,8 +79,8 @@ export default function About() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <span className="text-luna-mauve text-sm tracking-[0.2em] uppercase">Team</span>
-            <h2 className="mt-3 text-4xl font-playfair text-luna-charcoal">Meet Our Estheticians</h2>
-            <p className="mt-3 text-luna-gray max-w-xl mx-auto">Passionate, experienced, and dedicated to your skincare journey.</p>
+            <h2 className="mt-3 text-4xl font-playfair text-luna-charcoal">Meet Our Practitioners</h2>
+            <p className="mt-3 text-luna-gray max-w-xl mx-auto">Experienced, passionate, and dedicated to your results.</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
             {team.map(member => (
@@ -100,8 +100,8 @@ export default function About() {
       <section className="py-16 bg-gradient-teal relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_85%_20%,rgba(212,162,84,0.06)_0%,transparent_45%),radial-gradient(circle_at_15%_85%,rgba(13,82,82,0.04)_0%,transparent_45%)]" />
         <div className="relative max-w-3xl mx-auto px-4 text-center">
-          <h2 className="text-3xl font-playfair text-luna-cream">Experience the Studio Luna Difference</h2>
-          <p className="mt-3 text-luna-cream/60">Come in for a complimentary consultation and see why our clients trust us with their skin.</p>
+          <h2 className="text-3xl font-playfair text-luna-cream">Experience the Introstem Difference</h2>
+          <p className="mt-3 text-luna-cream/60">Come in for a complimentary skin consultation and discover what medical-grade aesthetics can do for you.</p>
           <Link to="/contact" className="mt-8 inline-flex items-center gap-2 px-7 py-3.5 bg-luna-midnight text-white font-semibold text-base rounded-[8px] shadow-[0_4px_12px_rgba(13,82,82,0.25)] hover:brightness-110 transition-all duration-200">
             Book Your Visit
             <svg viewBox="0 0 24 24" className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2"><path d="M5 12h14M12 5l7 7-7 7" /></svg>
