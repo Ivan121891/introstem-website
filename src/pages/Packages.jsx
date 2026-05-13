@@ -71,7 +71,7 @@ const packages = [
     desc: 'A shared experience on the Magnificent Mile. Choose any two treatments for a side-by-side session in our couples suite.',
     items: ['2 Customized Treatments', 'Champagne or Sparkling Water', '20% off retail take-home'],
     popular: false,
-    image: 'spa-2.jpg',
+    image: 'facial-3.jpg',
   },
 ]
 
