@@ -3,25 +3,23 @@ logs
 *.log
 npm-debug.log*
 yarn-debug.log*
-yarn-error.log*
-pnpm-debug.log*
-lerna-debug.log*
 
+# Dependency directories
 node_modules
-dist
-server/orders.json
-dist
-dist-ssr
-*.local
-server/.env
 
-# Editor directories and files
-.vscode/*
-!.vscode/extensions.json
+# Build output
+dist
+
+# Vite cache
+.vite
+
+# Server data
+server/orders.json
+
+# Editor
+.vscode
 .idea
+
+# OS
 .DS_Store
-*.suo
-*.ntvs*
-*.njsproj
-*.sln
-*.sw?
+Thumbs.db
