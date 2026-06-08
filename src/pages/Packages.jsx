@@ -73,6 +73,36 @@ const packages = [
     popular: false,
     image: 'facial-3.jpg',
   },
+  {
+    id: 'gold-coast',
+    name: 'The Gold Coast Experience',
+    price: '2000',
+    original: '2500',
+    desc: 'Our most luxurious facial journey combining advanced resurfacing, LED therapy, and custom enzymes for transformative radiance.',
+    items: ['Medical-Grade Chemical Peel', 'LED Light Therapy (Red + Blue)', 'Custom Enzyme Mask', 'Soothing Recovery Mask'],
+    popular: false,
+    image: 'facial-7.jpg',
+  },
+  {
+    id: 'river-north',
+    name: 'The River North Renewal',
+    price: '1899',
+    original: '2199',
+    desc: 'A comprehensive skin rejuvenation package featuring PRP micro-needling and targeted LED therapy for deep collagen renewal.',
+    items: ['PRP Micro-Needling', 'LED Light Therapy', 'Collagen Sheet Mask', 'Home-Care Regimen'],
+    popular: false,
+    image: 'facial-8.jpg',
+  },
+  {
+    id: 'bucktown-bliss',
+    name: 'The Bucktown Bliss',
+    price: '1900',
+    original: '2299',
+    desc: 'Intensive hydration and resurfacing protocol with micro-needling, custom peel, and LED for a complete skin transformation.',
+    items: ['Signature Micro-Needling', 'Custom Clinical Peel', 'LED Blue Light Therapy', 'Hydrating Mask'],
+    popular: false,
+    image: 'facial-9.jpg',
+  },
 ]
 
 export default function Packages() {
